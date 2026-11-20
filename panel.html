@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>𝕏 回关助手</title><link rel="icon" href="icons/icon-32.png"><link rel="stylesheet" href="panel.css"></head>
+<body><main>
+<header><img class="mark" src="icons/icon-128.png" width="36" height="36" alt=""><div><h1>𝕏 回关助手</h1><small>Shane · 本地查看</small></div><span id="connection" role="status">连接中</span></header>
+<details class="about">
+  <summary>功能介绍与使用说明</summary>
+  <p>看看哪些认证账号关注了你，而你还没回关。点开名单中的名字就能看看对方平时聊什么，再决定是否关注。</p>
+  <dl>
+    <dt>第一次扫描</dt><dd>登录 X，确认下方显示的是自己的账号，再点「开始扫描」。保持名单页和侧栏打开，直到读到末页。</dd>
+    <dt>筛选和导出</dt><dd>点「我未回关」查看全部待回关账号，也可以只看蓝 V，再按用户名或显示名搜索。「导出 CSV」会保存当前筛选和搜索命中的所有账号。</dd>
+    <dt>下次看什么</dt><dd>第二次完整扫描后，「新发现」会列出上次名单里没有、本次确认还没回关的人。已申请关注或关系待确认的账号会单独显示。</dd>
+    <dt>本地数据</dt><dd>最近一次完整名单和扫描时间按账号保存在本机。扫描中途结束会保留上次完整记录；点「清空数据」可删除当前账号的记录。</dd>
+  </dl>
+</details>
+<section class="guide"><div id="guideText">正在查找 X 标签页…</div><button id="connect" disabled>打开 X</button></section>
+<section class="metrics" aria-label="扫描统计"><div><strong id="nAll">0</strong>已扫描</div><div><strong id="nBlue">0</strong>蓝 V</div><div><strong id="nMutual">0</strong>互关</div><div><strong id="nOpen">0</strong>我未回关</div></section>
+<p role="status" id="status">尚未开始扫描</p>
+<div class="actions"><button id="start" class="primary" disabled>开始扫描</button><button id="pause" disabled>暂停</button><button id="resume" disabled>继续</button><button id="stop" disabled>结束</button><button id="csv" disabled>导出 CSV</button><button id="clear" disabled>清空数据</button></div>
+<section id="filters" aria-label="筛选名单"></section>
+<label class="search"><i aria-hidden="true"></i><input id="query" type="search" aria-label="搜索用户名或显示名" placeholder="搜索用户名或显示名"></label>
+<ul id="list"></ul><button id="more" hidden>显示更多</button>
+<footer>名单在本机处理。与 X 官方无关。</footer>
+</main><script src="panel.js"></script></body></html>
